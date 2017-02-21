@@ -5,8 +5,12 @@
   "manifest_version": 2,
   "description": "כלי עזר לסגל אתגר 22+",
   "permissions": [
-    "http://www.facebook.com/*", "https://www.facebook.com/*, https://clickbait-detector.herokuapp.com/*"
+    "http://www.facebook.com/*", "https://www.facebook.com/*, https://clickbait-detector.herokuapp.com/*",
+    "contextMenus"
   ],
+  "background": {
+    "scripts": ["contextMenu.js"]
+  },
   "web_accessible_resources": [ "locales/*"],
   "browser_action": {
     "default_icon": {
