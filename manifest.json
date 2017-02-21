@@ -1,0 +1,32 @@
+{
+  "name": "אתגר 22+",
+  "version": "0.0.1",
+  "author": "Eyal Pinkas",
+  "manifest_version": 2,
+  "description": "כלי עזר לסגל אתגר 22+",
+  "permissions": [
+    "http://www.facebook.com/*", "https://www.facebook.com/*, https://clickbait-detector.herokuapp.com/*"
+  ],
+  "web_accessible_resources": [ "locales/*"],
+  "browser_action": {
+    "default_icon": {
+      "19": "logo16.png",
+      "38": "logo48.png"
+    }
+  },
+  "icons": {
+     "128": "logo128.png",
+     "16": "logo16.png",
+     "48": "logo48.png"
+  },
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+  "homepage_url": "https://github.com/pinkasey/etgar22extension",
+  "content_scripts": [
+    {
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+        "js" : [ "facebook.js"],
+        "run_at" : "document_idle",
+        "all_frames" : false
+    }
+  ]
+}
