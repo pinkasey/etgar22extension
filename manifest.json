@@ -31,6 +31,10 @@
         "js" : [ "facebook.js"],
         "run_at" : "document_idle",
         "all_frames" : false
+    },
+    {
+        "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
+        "js" : [ "./scripts/jquery.js", "./scripts/facebook-scanner.js" ]
     }
   ]
 }
