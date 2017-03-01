@@ -19,7 +19,7 @@ var makePostsRed = function(predicate) {
     This function returns true if the DOM element or its children
     contains the string "מדריך"
 */
-var containsMadrichPredicate = function(element) {
+var noMadrichPredicate = function(element) {
     var string = element.outerHTML
     var substrings = [
       'מדריך',
@@ -27,10 +27,10 @@ var containsMadrichPredicate = function(element) {
     ]
     for (var i=0; i<substrings.length; i++){
       if (string.indexOf(substrings[i]) !== -1) {
-        return true
+        return false
       }
     }
-    return false
+    return true
 }
 
-makePostsRed(containsMadrichPredicate)
+makePostsRed(noMadrichPredicate)
