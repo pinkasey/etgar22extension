@@ -1,0 +1,6 @@
+//get content of forum 4 (q&a)
+http://localhost:3000/api/v1/forums/4?token=01d9fdccba0d1291a6c843e284f3a102
+
+//get topic 6 from forum (this case - q&a forum):
+http://localhost:3000/api/v1/topics/6?token=01d9fdccba0d1291a6c843e284f3a102
+
