@@ -20,10 +20,15 @@ var makePostsRed = function(predicate) {
     contains the string "מדריך"
 */
 var noMadrichPredicate = function(element) {
-    var string = element.outerHTML
+    var string = element.outerHTML.toLowerCase();
     var substrings = [
-      'מדריך',
-      'ךירדמ'
+        '[מדריך]',
+        '[ךירדמ]',
+        '[מדריכה]',
+        '[הכירדמ]',
+        '[מדריך/ה]',
+        '[מדריכ/ה]',
+        '[mentor]'
     ]
     for (var i=0; i<substrings.length; i++){
       if (string.indexOf(substrings[i]) !== -1) {
