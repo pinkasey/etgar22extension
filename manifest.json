@@ -28,7 +28,7 @@
   "content_scripts": [
     {
         "matches": ["http://www.facebook.com/*", "https://www.facebook.com/*"],
-        "js" : [ "facebook.js"],
+        "js" : [ "./scripts/jquery.js","facebook.js","scripts/invite_button.js"],
         "run_at" : "document_idle",
         "all_frames" : false
     },
