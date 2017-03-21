@@ -1,3 +1,5 @@
+/* Update interval (ms) */
+var updateInterval = 1000
 
 /* 
     This function surrounds the comments sections with a red border.
@@ -38,4 +40,5 @@ var noMadrichPredicate = function(element) {
     return true
 }
 
-makePostsRed(noMadrichPredicate)
+setInterval(function() { makePostsRed(noMadrichPredicate) },
+    updateInterval)
